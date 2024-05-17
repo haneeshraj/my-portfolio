@@ -1,0 +1,49 @@
+.main-text {
+  font-size: 17.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  user-select: none;
+}
+
+.star {
+  position: absolute;
+  transition: scale 0.3s cubic-bezier(0.55, 0, 0, 1.07);
+
+  &:hover {
+    scale: 1.4;
+  }
+
+  &--1 {
+    top: 16rem;
+    left: 6rem;
+    animation: rotateReverse 10s linear infinite;
+  }
+
+  &--2 {
+    top: 30rem;
+    right: 4rem;
+    transform: rotate(45deg);
+    animation: rotate 10s linear infinite;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateReverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

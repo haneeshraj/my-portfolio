@@ -1,0 +1,15 @@
+$accent: #8e52c5;
+$secondary: #573576;
+$primary: #bdabce;
+$background: #060507;
+$text: #efeff0;
+$nav-height: 8.6rem;
+
+:export {
+  accent: $accent;
+  secondary: $secondary;
+  primary: $primary;
+  background: $background;
+  text: $text;
+  navHeight: $nav-height;
+}

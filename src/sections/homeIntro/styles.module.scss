@@ -1,0 +1,41 @@
+@import "../../config/variables.module.scss";
+
+.content {
+  margin-top: $nav-height;
+  height: calc(100vh - $nav-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.intro-text {
+  font-size: 1.4rem;
+  text-align: center;
+  color: $text;
+  margin-bottom: 2rem;
+  width: 72rem;
+  margin-top: 2rem;
+  line-height: 2.4rem;
+}
+
+.arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 5rem;
+  transform: translateX(-50%) translateY(0);
+  animation: arrow 3s cubic-bezier(0.77, 0, 0.07, 1) infinite;
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
