@@ -16,6 +16,11 @@
     left: 0;
     height: 100%;
     width: 100%;
+    background: linear-gradient(
+      0deg,
+      rgba(6, 5, 7, 1) 0%,
+      rgba(6, 5, 7, 0) 56%
+    );
   }
 }
 

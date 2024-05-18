@@ -25,6 +25,51 @@ const Element = {
     );
   },
 
+  simpleArrowRight: ({
+    height = "24",
+    width = "24",
+    color = "#EFEFF0",
+    className,
+  }: {
+    height?: string;
+    width?: string;
+    className?: string;
+    color?: string;
+  }) => {
+    return (
+      <svg
+        width={width}
+        height={height}
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className={className}
+      >
+        <g clip-path="url(#clip0_80_134)">
+          <path
+            d="M10 17L15 12"
+            stroke={color}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+          />
+          <path
+            d="M15 12L10 7"
+            stroke={color}
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_80_134">
+            <rect width="24" height="24" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    );
+  },
+
   arrow: ({
     height = "25",
     width = "11",
@@ -46,7 +91,7 @@ const Element = {
         <path
           d="M24 1.0522C24 1.0522 12.5 -0.319497 12.5 11C12.5 -0.319497 1 1.0522 1 1.0522"
           stroke="white"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
         />
       </svg>
     );

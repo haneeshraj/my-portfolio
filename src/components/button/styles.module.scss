@@ -1,0 +1,50 @@
+@import "../../config/variables.module.scss";
+@import "../../config/mixins.module.scss";
+
+.button {
+  width: fit-content;
+  outline: 1px solid $text;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  @include link-style;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  transition: all 0.3s;
+  padding-right: 3rem;
+
+  .icon {
+    transform: translateX(-0.2rem);
+    transition: transform 0.3s cubic-bezier(0.65, 0.05, 0, 1);
+  }
+
+  &:hover .icon path {
+    stroke: $background;
+  }
+
+  &:hover {
+    outline: 1px solid rgba($text, 0);
+    background-color: $accent;
+    color: $background;
+
+    .text {
+      font-weight: 500;
+    }
+
+    .icon {
+      transform: translateX(0.3rem);
+    }
+  }
+
+  &:active {
+    background-color: $text;
+    .icon {
+      transform: translateX(0rem) rotate(180deg);
+      transition: transform 0.3s cubic-bezier(0.65, 0.05, 0, 1);
+    }
+  }
+}
+
+.text {
+  font-size: 1.2rem;
+}

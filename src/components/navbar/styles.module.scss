@@ -11,7 +11,8 @@
   justify-content: space-between;
   padding-inline: 3.2rem;
   list-style: none;
-  backdrop-filter: blur(1rem);
+  backdrop-filter: blur(1.6rem);
+  z-index: 1000;
 }
 
 .nav-items {
