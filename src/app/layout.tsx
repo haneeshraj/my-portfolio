@@ -3,6 +3,7 @@ import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import Main from "@/sections/main/Main";
 import Navbar from "@/components/navbar/Navbar";
+import SmoothScroller from "@/components/smoothScroller/SmoothScroller";
 
 export const metadata: Metadata = {
   title: "Home | Haneesh Raj B",
@@ -22,9 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={workSans.className}>
-        <Navbar />
+        <SmoothScroller>
+          <Navbar />
 
-        <Main>{children}</Main>
+          <Main>{children}</Main>
+        </SmoothScroller>
       </body>
     </html>
   );

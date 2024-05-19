@@ -45,7 +45,7 @@ const Element = {
         xmlns="http://www.w3.org/2000/svg"
         className={className}
       >
-        <g clip-path="url(#clip0_80_134)">
+        <g clipPath="url(#clip0_80_134)">
           <path
             d="M10 17L15 12"
             stroke={color}
