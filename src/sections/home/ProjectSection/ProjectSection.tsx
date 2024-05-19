@@ -93,14 +93,7 @@ const ProjectSection = () => {
         <div className={styles.projects}>
           <div className={styles["projects__grid"]}>
             {projects
-              .filter(
-                (project) =>
-                  project.type ===
-                  selectedCategory
-                    .toLowerCase()
-                    .replace(" ", "_")
-                    .replace("/", "_")
-              )
+              .filter((project) => project.type === selectedCategory)
               .map((project, index) => (
                 <ProjectItem key={project.id} project={project} index={index} />
               ))}
@@ -110,7 +103,10 @@ const ProjectSection = () => {
       <Reveal>
         <Button
           icon={<Element.simpleArrowRight />}
-          href={`/work?type=${selectedCategory}`}
+          href={`/work?type=${selectedCategory
+            .toLowerCase()
+            .replace(" ", "_")
+            .replace("/", "_")}`}
           className={styles["btn"]}
         >
           Show more
