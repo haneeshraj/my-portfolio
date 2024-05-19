@@ -93,7 +93,14 @@ const ProjectSection = () => {
         <div className={styles.projects}>
           <div className={styles["projects__grid"]}>
             {projects
-              .filter((project) => project.type === selectedCategory)
+              .filter(
+                (project) =>
+                  project.type ===
+                  selectedCategory
+                    .toLowerCase()
+                    .replace(" ", "_")
+                    .replace("/", "_")
+              )
               .map((project, index) => (
                 <ProjectItem key={project.id} project={project} index={index} />
               ))}
