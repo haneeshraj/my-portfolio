@@ -11,10 +11,10 @@ export const navItems = [
     name: "Gallery",
     path: "/gallery",
   },
-  {
-    name: "Shop",
-    path: "/shop",
-  },
+  // {
+  //   name: "Shop",
+  //   path: "/shop",
+  // },
   {
     name: "About",
     path: "/about",
