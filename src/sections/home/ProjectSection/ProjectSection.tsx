@@ -89,24 +89,26 @@ const ProjectSection = () => {
           />
         ))}
       </div>
-
-      <div className={styles.projects}>
-        <div className={styles["projects__grid"]}>
-          {projects
-            .filter((project) => project.type === selectedCategory)
-            .map((project, index) => (
-              <ProjectItem key={project.id} project={project} index={index} />
-            ))}
+      <Reveal>
+        <div className={styles.projects}>
+          <div className={styles["projects__grid"]}>
+            {projects
+              .filter((project) => project.type === selectedCategory)
+              .map((project, index) => (
+                <ProjectItem key={project.id} project={project} index={index} />
+              ))}
+          </div>
         </div>
-      </div>
-
-      <Button
-        icon={<Element.simpleArrowRight />}
-        href={`/work?type=${selectedCategory}`}
-        className={styles["btn"]}
-      >
-        Show more
-      </Button>
+      </Reveal>
+      <Reveal>
+        <Button
+          icon={<Element.simpleArrowRight />}
+          href={`/work?type=${selectedCategory}`}
+          className={styles["btn"]}
+        >
+          Show more
+        </Button>
+      </Reveal>
     </div>
   );
 };
