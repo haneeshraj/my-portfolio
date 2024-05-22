@@ -1,3 +1,5 @@
+@import "../../config/mixins.module.scss";
+
 .main-text {
   font-size: 17.2rem;
   display: flex;
@@ -6,25 +8,38 @@
   align-items: center;
   position: relative;
   user-select: none;
+
+  @include respond(tab-land) {
+    font-size: clamp(6rem, 15vw, 17.2rem);
+  }
+
+  @include respond(tab-port) {
+    width: 90%;
+    font-size: clamp(4rem, 15vw, 17.2rem);
+  }
 }
 
 .star {
   position: absolute;
   transition: scale 0.3s cubic-bezier(0.55, 0, 0, 1.07);
 
+  @include respond(tab-port) {
+    scale: 0.4;
+  }
+
   &:hover {
     scale: 1.4;
   }
 
   &--1 {
-    top: 16rem;
-    left: 6rem;
+    bottom: -2rem;
+    left: -3rem;
     animation: rotateReverse 10s linear infinite;
   }
 
   &--2 {
-    top: 30rem;
-    right: 4rem;
+    top: -5rem;
+    right: -1rem;
     transform: rotate(45deg);
     animation: rotate 10s linear infinite;
   }

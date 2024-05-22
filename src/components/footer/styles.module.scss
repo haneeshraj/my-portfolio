@@ -1,13 +1,32 @@
+@import "../../config/mixins.module.scss";
+
 .footer {
   display: flex;
   padding: 3rem 6rem;
   align-items: center;
   justify-content: space-between;
+
+  @include respond(phone) {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+.copyright {
+  @include respond(phone) {
+    text-align: center;
+  }
 }
 
 .socials {
   display: flex;
   gap: 4rem;
+
+  @include respond(phone) {
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   & > * {
     opacity: 0.3;

@@ -41,8 +41,6 @@ const Footer = () => {
             width="18"
           />
         </Link>
-
-        <Link href=""></Link>
       </div>
     </div>
   );

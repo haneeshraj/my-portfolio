@@ -53,8 +53,8 @@ const ProjectItem = ({
           <Image
             src={project.images[1]}
             alt={project.name}
-            layout="fill"
-            objectFit="cover"
+            style={{ objectFit: "cover" }}
+            fill
           />
         </div>
         <div
@@ -66,8 +66,8 @@ const ProjectItem = ({
           <Image
             src={project.images[2]}
             alt={project.name}
-            layout="fill"
-            objectFit="cover"
+            style={{ objectFit: "cover" }}
+            fill
           />
         </div>
       </div>

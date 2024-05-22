@@ -20,6 +20,10 @@
   align-items: center;
   list-style: none;
   gap: 3rem;
+
+  @include respond(tab-port) {
+    display: none;
+  }
 }
 
 .nav-item {
@@ -60,6 +64,10 @@
   align-items: center;
   gap: 1.5rem;
 
+  @include respond(tab-port) {
+    display: none;
+  }
+
   .name {
     font-size: 1.2rem;
     color: $text;
@@ -90,5 +98,79 @@
     height: 0.4rem;
     border-radius: 50%;
     background-color: $text;
+  }
+}
+
+.hamburger {
+  width: 4rem;
+  height: 2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.46, 0, 0.01, 1.4);
+  gap: 0;
+  display: none;
+
+  @include respond(tab-port) {
+    display: flex;
+  }
+}
+
+.open {
+  gap: 0.4rem;
+}
+
+.line {
+  width: 60%;
+  height: 2px;
+  background-color: $text;
+  transform-origin: 44%;
+  transition: all 0.3s cubic-bezier(0.46, 0, 0.01, 1.4);
+}
+
+.line--1 {
+  transform: rotate(45deg);
+}
+.line--2 {
+  transform: rotate(-45deg);
+}
+
+.nav-mobile {
+  &__bg {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $background;
+    z-index: 999;
+    backdrop-filter: 10rem;
+  }
+
+  &__list {
+    position: fixed;
+    top: $nav-height;
+    z-index: 1000;
+    width: 100%;
+    padding-top: 3rem;
+  }
+
+  &__item {
+    @include link-style;
+    font-size: 7.2rem;
+    color: $text;
+    display: block;
+    width: 85%;
+    margin: 0 auto;
+    font-weight: 600;
+
+    &--active {
+      color: $accent;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
   }
 }
