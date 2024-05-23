@@ -23,6 +23,18 @@ export const projects: Project[] = [
     source: "https://github.com",
   },
   {
+    id: "project_a1",
+    name: "Project a1",
+    type: "Web",
+    images: [
+      "https://via.placeholder.com/1920x1080/3b3b3b?text=16:9",
+      "https://via.placeholder.com/1920x1080/3b3b3b?text=16:9",
+      "https://via.placeholder.com/1920x1080/3b3b3b?text=16:9",
+    ],
+    live: "/",
+    source: "https://github.com",
+  },
+  {
     id: "project_2",
     name: "Project 2",
     type: "Web",
@@ -87,8 +99,8 @@ export const projects: Project[] = [
   },
 
   {
-    id: "project_1",
-    name: "Project 1",
+    id: "project_31",
+    name: "Project 31",
     type: "Motion Design",
     images: [
       "https://via.placeholder.com/1920x1080/3b3b3b?text=16:9",
@@ -99,8 +111,8 @@ export const projects: Project[] = [
     source: "https://github.com",
   },
   {
-    id: "project_2",
-    name: "Project 2",
+    id: "project_234",
+    name: "Project 234",
     type: "Motion Design",
     images: [
       "https://via.placeholder.com/1920x1080/3b3b3b?text=16:9",
@@ -112,8 +124,8 @@ export const projects: Project[] = [
   },
 
   {
-    id: "project_3",
-    name: "Project 3",
+    id: "project_35",
+    name: "Project 35",
     type: "Motion Design",
     images: [
       "https://via.placeholder.com/1920x1080/3b3b3b?text=16:9",
@@ -124,8 +136,8 @@ export const projects: Project[] = [
     source: "https://github.com",
   },
   {
-    id: "project_5",
-    name: "Project 5",
+    id: "project_511",
+    name: "Project 511",
     type: "Graphic Design",
     images: [
       "https://via.placeholder.com/1920x1080/3b3b3b?text=16:9",
@@ -137,8 +149,8 @@ export const projects: Project[] = [
   },
 
   {
-    id: "project_9",
-    name: "Project 9",
+    id: "project_977",
+    name: "Project 977",
     type: "Graphic Design",
     images: [
       "https://via.placeholder.com/1920x1080/3b3b3b?text=16:9",
@@ -150,8 +162,8 @@ export const projects: Project[] = [
   },
 
   {
-    id: "project_11",
-    name: "Project 11",
+    id: "project_1111",
+    name: "Project 1111",
     type: "Graphic Design",
     images: [
       "https://via.placeholder.com/1920x1080/3b3b3b?text=16:9",
@@ -163,8 +175,8 @@ export const projects: Project[] = [
   },
 
   {
-    id: "project_1",
-    name: "Project 1",
+    id: "project_134",
+    name: "Project 134",
     type: "VFX",
     images: [
       "https://via.placeholder.com/1920x1080/3b3b3b?text=16:9",
@@ -175,8 +187,8 @@ export const projects: Project[] = [
     source: "https://github.com",
   },
   {
-    id: "project_2",
-    name: "Project 2",
+    id: "project_264",
+    name: "Project 264",
     type: "VFX",
     images: [
       "https://via.placeholder.com/1920x1080/3b3b3b?text=16:9",
@@ -188,8 +200,8 @@ export const projects: Project[] = [
   },
 
   {
-    id: "project_3",
-    name: "Project 3",
+    id: "project_3111",
+    name: "Project 3111",
     type: "VFX",
     images: [
       "https://via.placeholder.com/1920x1080/3b3b3b?text=16:9",
@@ -200,8 +212,8 @@ export const projects: Project[] = [
     source: "https://github.com",
   },
   {
-    id: "project_5",
-    name: "Project 5",
+    id: "project_335",
+    name: "Project 335",
     type: "Music",
     images: [
       "https://via.placeholder.com/1920x1080/3b3b3b?text=16:9",
@@ -213,8 +225,8 @@ export const projects: Project[] = [
   },
 
   {
-    id: "project_9",
-    name: "Project 9",
+    id: "project_923",
+    name: "Project 923",
     type: "Music",
     images: [
       "https://via.placeholder.com/1920x1080/3b3b3b?text=16:9",
@@ -226,8 +238,8 @@ export const projects: Project[] = [
   },
 
   {
-    id: "project_11",
-    name: "Project 11",
+    id: "project_1155",
+    name: "Project 1155",
     type: "Music",
     images: [
       "https://via.placeholder.com/1920x1080/3b3b3b?text=16:9",

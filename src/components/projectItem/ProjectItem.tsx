@@ -1,3 +1,4 @@
+import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import clsx from "clsx";
 import Link from "next/link";
@@ -15,11 +16,17 @@ const ProjectItem = ({
   project: Project;
   index: number;
 }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Ensures animation triggers only once when it enters the view
+    threshold: 0.1, // Percentage of element visibility to trigger the callback
+  });
+
   return (
     <motion.div
+      ref={ref}
       className={styles["project-item"]}
       initial={{ opacity: 0, y: 20, filter: "blur(3rem)" }}
-      animate={{ opacity: 1, y: 0, filter: "blur(0)" }}
+      animate={inView ? { opacity: 1, y: 0, filter: "blur(0)" } : {}}
       transition={{
         duration: 1,
         delay: index * 0.2,
