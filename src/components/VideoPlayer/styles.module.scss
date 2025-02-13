@@ -1,0 +1,147 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 2rem;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: 2;
+    transition: background-color 0.3s;
+  }
+
+  &:hover {
+    .video {
+      scale: 1;
+    }
+
+    .play-btn {
+      &--small {
+        width: 5.6rem;
+        height: 5.6rem;
+
+        svg {
+          width: 1.6rem;
+          height: 1.6rem;
+        }
+      }
+
+      &--large {
+        width: 8.8rem;
+        height: 8.8rem;
+
+        svg {
+          width: 1.6rem;
+          height: 1.6rem;
+        }
+      }
+    }
+  }
+
+  .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    scale: 1.1;
+    transition: scale 0.4s cubic-bezier(0.45, 0.07, 0, 0.99);
+  }
+
+  .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f3f3f3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    transition: width 0.3s cubic-bezier(0.45, 0.07, 0, 0.99),
+      height 0.3s cubic-bezier(0.45, 0.07, 0, 0.99);
+
+    &--small {
+      width: 5rem;
+      height: 5rem;
+
+      svg {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    &--large {
+      width: 8rem;
+      height: 8rem;
+
+      svg {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    svg {
+      fill: #161616;
+      transition: width 0.3s cubic-bezier(0.45, 0.07, 0, 0.99),
+        height 0.3s cubic-bezier(0.45, 0.07, 0, 0.99);
+    }
+  }
+}
+
+.video-player {
+  &__overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+  }
+
+  &__video {
+    width: calc(fit-content);
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+  }
+
+  &__close {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+      fill: #161616;
+    }
+  }
+}
+
+.controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
