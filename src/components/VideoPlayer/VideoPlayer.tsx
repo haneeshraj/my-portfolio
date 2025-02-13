@@ -12,7 +12,7 @@ export default function VideoPlayer({
   size = "large",
 }: {
   src: string;
-  size: "small" | "large";
+  size?: "small" | "large";
 }) {
   const [isClicked, setIsClicked] = useState(false);
 
