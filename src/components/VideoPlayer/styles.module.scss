@@ -144,4 +144,12 @@
   left: 0;
   width: 100%;
   height: 100%;
+
+  &__play {
+    svg {
+      height: 2rem;
+      width: 2rem;
+      fill: #000;
+    }
+  }
 }
