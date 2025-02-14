@@ -54,6 +54,7 @@ const AnimatedText = ({
             variants={slide}
             custom={{ index, duration, delay, iDelay, ease }}
             initial="initial"
+            exit="exit"
             animate={mainControls}
           >
             {letter === " " ? "\u00A0" : letter}
@@ -78,6 +79,7 @@ const AnimatedText = ({
             variants={slide}
             custom={{ index, duration, delay, iDelay, ease }}
             initial="initial"
+            exit="exit"
             animate={mainControls}
           >
             {letter === " " ? "\u00A0" : letter}
@@ -102,6 +104,7 @@ const AnimatedText = ({
             variants={slide}
             custom={{ index, duration, delay, iDelay, ease }}
             initial="initial"
+            exit="exit"
             animate={mainControls}
           >
             {letter === " " ? "\u00A0" : letter}
@@ -126,6 +129,7 @@ const AnimatedText = ({
             variants={slide}
             custom={{ index, duration, delay, iDelay, ease }}
             initial="initial"
+            exit="exit"
             animate={mainControls}
           >
             {letter === " " ? "\u00A0" : letter}
@@ -150,6 +154,7 @@ const AnimatedText = ({
             variants={slide}
             custom={{ index, duration, delay, iDelay, ease }}
             initial="initial"
+            exit="exit"
             animate={mainControls}
           >
             {letter === " " ? "\u00A0" : letter}

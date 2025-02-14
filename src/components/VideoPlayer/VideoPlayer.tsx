@@ -6,6 +6,7 @@ import clsx from "clsx";
 
 import { view, btn } from "./anim";
 import styles from "./styles.module.scss";
+import AnimatedText from "../AnimateText/AnimateText";
 
 export default function VideoPlayer({
   src,
@@ -145,6 +146,15 @@ export default function VideoPlayer({
               >
                 <source src={src} type="video/mp4" />
               </video>
+              <AnimatePresence>
+                {!isPlaying && (
+                  <AnimatedText
+                    text="PAUSED"
+                    type="p"
+                    className={styles["pause-text"]}
+                  />
+                )}
+              </AnimatePresence>
               <motion.button
                 className={clsx(
                   styles["controls__playback"],
@@ -235,14 +245,14 @@ export default function VideoPlayer({
                     <path
                       d="M15 15L21 9"
                       stroke="#222222"
-                      stroke-width="2"
-                      stroke-linecap="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
                     />
                     <path
                       d="M21 15L15 9"
                       stroke="#222222"
-                      stroke-width="2"
-                      stroke-linecap="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
                     />
                   </svg>
                 ) : (
@@ -260,14 +270,14 @@ export default function VideoPlayer({
                     <path
                       d="M14.5355 8.46447C15.4684 9.39732 15.9948 10.6611 16 11.9803C16.0052 13.2996 15.4888 14.5674 14.5633 15.5076"
                       stroke="#222222"
-                      stroke-width="2"
-                      stroke-linecap="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
                     />
                     <path
                       d="M18.6569 6.34314C20.1494 7.83572 20.9916 9.85769 20.9999 11.9685C21.0083 14.0793 20.182 16.1078 18.7012 17.6121"
                       stroke="#222222"
-                      stroke-width="2"
-                      stroke-linecap="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
                     />
                   </svg>
                 )}
