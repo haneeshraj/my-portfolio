@@ -186,17 +186,14 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+    z-index: 102;
   }
 }
 
 .controls {
-  width: 100%;
-  height: 100%;
+  height: 10rem;
 
-  &__playback {
-    position: absolute;
-    bottom: 3rem;
-    left: 4rem;
+  &__icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -204,6 +201,16 @@
     background-color: rgba(255, 255, 255, 0.8);
     padding: 4px;
     border-radius: 50%;
+    z-index: 110;
+    scale: 1;
+    cursor: pointer;
+    transition: background-color 0.3s,
+      scale 0.3s cubic-bezier(0.53, -0.67, 0.26, 1.67);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 1);
+      scale: 1.3;
+    }
 
     svg {
       width: 2.8rem;
@@ -211,12 +218,15 @@
     }
   }
 
-  &__range {
+  &__playback {
     position: absolute;
-    bottom: 4.3rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50%;
-    height: 1rem;
+    bottom: 3rem;
+    left: 4rem;
+  }
+
+  &__mute {
+    position: absolute;
+    bottom: 3rem;
+    right: 4rem;
   }
 }
