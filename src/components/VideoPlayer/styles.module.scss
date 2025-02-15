@@ -187,47 +187,28 @@
     height: 100%;
     object-fit: contain;
     z-index: 102;
+    transition: filter 0.3s;
+
+    &--paused {
+      filter: blur(5px) grayscale(1);
+    }
   }
-}
 
-.controls {
-  height: 10rem;
-
-  &__icon {
+  &__replay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 110;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-style: none;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 4px;
-    border-radius: 50%;
-    z-index: 110;
-    scale: 1;
-    cursor: pointer;
-    transition: background-color 0.3s,
-      scale 0.3s cubic-bezier(0.53, -0.67, 0.26, 1.67);
+    width: 6rem;
+    height: 6rem;
 
     &:hover {
-      background-color: rgba(255, 255, 255, 1);
-      scale: 1.3;
+      transform: translate(-50%, -50%) scale(1.2);
     }
-
-    svg {
-      width: 2.8rem;
-      height: 2.8rem;
-    }
-  }
-
-  &__playback {
-    position: absolute;
-    bottom: 3rem;
-    left: 4rem;
-  }
-
-  &__mute {
-    position: absolute;
-    bottom: 3rem;
-    right: 4rem;
   }
 }
 
@@ -246,4 +227,163 @@
   mix-blend-mode: difference;
   user-select: none;
   pointer-events: none;
+}
+
+.controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  background: linear-gradient(to top, black, transparent);
+  z-index: 105;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-inline: 2rem;
+
+  &__time {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  &__replay {
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 110;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+
+    border-radius: 50%;
+    border-style: none;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: background-color 0.3s,
+      transform 400ms cubic-bezier(0.67, -0.67, 0, 1.44);
+
+    button {
+      background-color: transparent;
+      border-style: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      rotate: 0;
+      transition: background-color 0.3s,
+        transform 400ms cubic-bezier(0.67, -0.67, 0, 1.44);
+    }
+
+    &:hover {
+      transform: translate(-50%, -50%) scale(1.2);
+      background-color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    padding: 4px;
+    border-radius: 50%;
+    border-style: none;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: background-color 0.3s,
+      scale 400ms cubic-bezier(0.67, -0.67, 0, 1.44);
+
+    &::after {
+      content: attr(data-label);
+      font-family: var(--font-dm-sans);
+      font-size: 1rem;
+      position: absolute;
+
+      padding: 0.1rem 0.6rem;
+      z-index: 2;
+      transition: background-color 0.3s,
+        transform 0.3s cubic-bezier(0.37, 0.31, 0, 1.44), opacity 0.2s;
+      border-radius: 10rem;
+      background-color: rgb(243, 243, 243);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      opacity: 0;
+      transform: translateY(-2rem);
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 1);
+      scale: 1.2;
+
+      &::after {
+        transform: translateY(-3rem);
+        opacity: 1;
+      }
+    }
+  }
+
+  &__video-progress {
+    width: 80%;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #cacaca;
+    height: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background: #fff;
+      height: 4px;
+    }
+
+    /* Thumb for WebKit (Chrome, Safari, Edge) */
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 1.4rem;
+      width: 1.4rem;
+      background-color: #fff;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        scale: 1.1;
+      }
+    }
+
+    /* Thumb for Firefox */
+    &::-moz-range-thumb {
+      height: 1.4rem;
+      width: 1.4rem;
+      background-color: #fff;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        scale: 1.1;
+      }
+
+      &:active {
+        scale: 1.4;
+      }
+    }
+  }
 }
